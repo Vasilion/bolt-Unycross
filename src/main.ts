@@ -3,7 +3,7 @@ import { provideRouter, Routes } from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { App } from './app/app.component';
 import { HomeComponent } from './app/pages/home.component';
-import { AboutComponent } from './app/pages/about.component';
+import { AboutComponent } from './app/features/about/about.component';
 import { ServicesComponent } from './app/pages/services.component';
 import { PortfolioComponent } from './app/pages/portfolio.component';
 import { BlogComponent } from './app/pages/blog.component';
