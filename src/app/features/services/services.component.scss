@@ -1,0 +1,144 @@
+.services-page {
+  background-color: var(--darker);
+  min-height: calc(100vh - 64px);
+  padding: 4rem 0;
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--primary-purple);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.service-item {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-item mat-icon {
+  font-size: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--primary-purple);
+  margin-bottom: 1rem;
+}
+
+.service-item h3 {
+  color: var(--primary-purple);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-item p {
+  color: var(--light);
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.pricing-title {
+  margin-top: 4rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+  background-color: var(--card-bg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--primary-purple);
+  position: relative;
+}
+
+.pricing-card.featured::before {
+  content: 'Popular';
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--primary-purple);
+  color: var(--light);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+mat-card-title {
+  color: var(--primary-purple) !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+mat-card-subtitle {
+  color: var(--light) !important;
+  opacity: 0.8;
+}
+
+.price {
+  font-size: 2.5rem;
+  color: var(--primary-purple);
+  margin: 1.5rem 0;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+li {
+  padding: 0.8rem 0;
+  color: var(--light);
+  opacity: 0.9;
+  border-bottom: 1px solid var(--input-bg);
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+mat-card-actions {
+  padding: 1.5rem;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+
+  h1, h2 {
+    font-size: 2rem;
+  }
+}
