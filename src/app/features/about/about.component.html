@@ -1,0 +1,62 @@
+<section class="about-page section-padding">
+  <div class="container">
+    <h1>About Unycross</h1>
+    <div class="about-content">
+      <mat-card>
+        <mat-card-content>
+          <div class="story-section">
+            <div class="image-slider">
+              <div class="slider-container" [style.transform]="'translateX(' + (-currentSlide * 100) + '%)'">
+                <img src="https://source.unsplash.com/random/800x400?office" alt="Our Office">
+                <img src="https://source.unsplash.com/random/800x400?team" alt="Our Team">
+                <img src="https://source.unsplash.com/random/800x400?technology" alt="Our Technology">
+              </div>
+              <div class="slider-controls">
+                <button mat-icon-button (click)="prevSlide()">
+                  <mat-icon>chevron_left</mat-icon>
+                </button>
+                <div class="slider-dots">
+                  @for (dot of [0, 1, 2]; track dot) {
+                    <span 
+                      class="dot" 
+                      [class.active]="currentSlide === dot"
+                      (click)="currentSlide = dot">
+                    </span>
+                  }
+                </div>
+                <button mat-icon-button (click)="nextSlide()">
+                  <mat-icon>chevron_right</mat-icon>
+                </button>
+              </div>
+            </div>
+            <div class="story-content">
+              <h2>Our Story</h2>
+              <p>
+                Unycross is a leading web development and hosting company dedicated to 
+                transforming digital ideas into reality. Founded with a passion for 
+                creating exceptional web experiences, we've helped numerous businesses 
+                establish their online presence.
+              </p>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <div class="about-grid">
+        <mat-card>
+          <mat-card-content>
+            <h3>Our Mission</h3>
+            <p>To deliver innovative web solutions that empower businesses to thrive in the digital age.</p>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+          <mat-card-content>
+            <h3>Our Vision</h3>
+            <p>To be the leading force in web development, setting new standards for digital excellence.</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>
